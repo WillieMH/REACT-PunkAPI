@@ -8,7 +8,9 @@ const BeerTiles = (props) => {
     <div className="container__beer-tiles--beercard">
       <h2>{beer.name}</h2>
       <h4>"{beer.tagline}"</h4>
-      {/* <img src={beer.image_url} alt="Beer" /> */}
+      <h4>"ABV{beer.abv}% Acidity:{beer.ph}</h4>
+      <img src={beer.image_url} alt="Beer" />
+      <h4>First Brewed {beer.first_brewed}</h4>
     </div>  
       
 
