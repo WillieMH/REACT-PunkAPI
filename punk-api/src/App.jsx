@@ -5,6 +5,7 @@ import { useState } from "react";
 import BeerTiles from "./containers/BeerTiles/BeerTiles.jsx"
 import Button from "./components/Button/Button.jsx"
 import Nav from './containers/Nav/Nav';
+import SearchBar from './containers/SearchBar/SearchBar';
 
 const App = () => {
   const [punks, setPunks] = useState([]);
@@ -47,12 +48,16 @@ const returnCheckBox = (event) => {
         <Nav
         tickCheckBox={returnCheckBox}
         />
+
+        <h2>Search Bar</h2>
+        <SearchBar punksArry={punks}/>
+
         <h4>Beers returned = {punks.length}</h4>
       </div>
 
-      <div className="container__beer-tiles">
+      {/* <div className="container__beer-tiles">
         <BeerTiles beersArry={punks}/>
-      </div>
+      </div> */}
 
     </div>
   );
