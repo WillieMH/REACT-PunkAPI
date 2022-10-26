@@ -1,9 +1,6 @@
 import './App.scss';
 // import beersData from "./data/beersData.jsx"
 import { useState, useEffect } from "react";
-
-import BeerTiles from "./containers/BeerTiles/BeerTiles.jsx"
-import Button from "./components/Button/Button.jsx"
 import Nav from './containers/Nav/Nav';
 import SearchBar from './containers/SearchBar/SearchBar';
 
@@ -11,25 +8,30 @@ const App = () => {
   const [punks, setPunks] = useState([]);
   const [filterBy, setFilterBy] = useState("")
 
-  let punkUrl = {
-    inUseURL: `https://api.punkapi.com/v2/beers?per_page=80`
-  }
 
-  const getPunks = async () => {
-    let url = punkUrl.inUseURL;
-    const res = await fetch(url);
+
+  const getPunks = async (beerFilter) => {
+    let APIurl = `https://api.punkapi.com/v2/beers?per_page=80`;
+    
+    if (beerFilter === "abv > 6%") {
+      APIurl = "https://api.punkapi.com/v2/beers?per_page=80&abv_gt=6"
+    } else if (beerFilter === "classic (brewed before 2010)") {
+      APIurl = "https://api.punkapi.com/v2/beers?per_page=80&brewed_before=01-2010"
+    }
+
+    const res = await fetch(APIurl);
     const data = await res.json();
     setPunks(data);
     console.log(punks)
 };
 
-const handleClick = (event) => {
-  setFilterBy(event.target.value);
-};
-
   useEffect(() => {
-    getPunks();
-  },[]);
+    getPunks(filterBy);
+  },[filterBy]);
+
+  const handleClick = (event) => {
+    setFilterBy(event.target.value);
+  };
 
 
   return (
@@ -48,13 +50,6 @@ const handleClick = (event) => {
       </div>
 
         <SearchBar punksArry={punks}/>
-
-        
-
-
-      {/* <div className="container__beer-tiles">
-        <BeerTiles beersArry={punks}/>
-      </div> */}
 
     </div>
   );
