@@ -1,11 +1,12 @@
-.container__beer-tiles--beercard{
+
+
+.container__beer-tiles {
   margin: 10px;
   border: 2px solid black;
   width: 400px;
   color: black;
-  // line-height: 5px;
-  word-wrap: normal;
   padding: 10px;
+  background-color: rgb(250, 235, 215, 0.75);
   
 }
 
@@ -15,5 +16,5 @@ h4 {
 }
 
 img {
-  width: 100px;
+  max-height: 200px;
 }

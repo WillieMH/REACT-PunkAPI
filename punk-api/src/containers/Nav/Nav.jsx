@@ -1,37 +1,28 @@
 import "./Nav.scss";
 
-const Nav = ({ tickCheckBox }) => {
+const Nav = ({ onChange, selected, options, label }) => {
   return (
-    <div className="filter-checkboxes">
-      <label htmlFor="" className="filter-checkboxes__classic">
-        Classic (Pre 2010)
-      </label>
-      <input
-        type="checkbox"
-        value="classic"
-        className="filter-checkboxes__classic--input"
-        onChange={tickCheckBox}
-      />
-      <br />
-      <label htmlFor="" className="filter-checkboxes__abv">
-        ABV &gt; 6%
-      </label>
-      <input
-        type="checkbox"
-        value="abv"
-        className="filter-checkboxes__classic--input"
-        onChange={tickCheckBox}
-      />
-      <br />
-      <label htmlFor="" className="filter-checkboxes__classic">
-        Acidity &lt; pH4
-      </label>
-      <input
-        type="checkbox"
-        value="acidity"
-        className="filter-checkboxes__classic--input"
-        onChange={tickCheckBox}
-      />
+    <div className="radio-buttons">
+      <p>{label}</p>
+      {options.map((option, index) => {
+        const optionLower = option.toLowerCase();
+        const optionCapitalized =
+          optionLower[0].toUpperCase() + optionLower.slice(1);
+        return (
+          <div key={"radio-button" + option + index}>
+            <input
+              type="radio"
+              name="gender"
+              value={optionLower}
+              checked={optionLower === selected.toLowerCase()}
+              onChange={onChange}
+            />
+            <label className="radio-buttons__label" htmlFor={optionLower}>
+              {option}
+            </label>
+          </div>
+        );
+      })}
     </div>
   );
 };

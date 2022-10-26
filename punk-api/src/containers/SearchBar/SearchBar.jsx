@@ -2,6 +2,8 @@ import "./SearchBar.scss"
 import { useState } from "react";
 import BeerTiles from "../BeerTiles/BeerTiles";
 import SearchBanner from "../../components/SearchBanner/SearchBanner"
+import Nav from "../Nav/Nav";
+
 
 
 const SearchBar = ({punksArry}) => {
@@ -17,12 +19,17 @@ const SearchBar = ({punksArry}) => {
 
     return ammendedPunks.includes(searchTerm);
   });
+  
 
   return (
-    <>
-    <SearchBanner label={"Beers"} searchTerm={searchTerm} handleInput={handleInput} />
-    <BeerTiles beersArry={filteredPunks}/>
-    </>
+    <div className="container">
+      <div className="searchbanner">
+        <SearchBanner label={"Search Beers"} searchTerm={searchTerm} handleInput={handleInput} />
+      </div>
+      <div className="beertiles">
+        <BeerTiles beersArry={filteredPunks}/>
+      </div>
+    </div>
   )
 
 };
