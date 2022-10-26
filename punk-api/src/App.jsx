@@ -9,7 +9,7 @@ import SearchBar from './containers/SearchBar/SearchBar';
 
 const App = () => {
   const [punks, setPunks] = useState([]);
-  const [filterBy, setFilterBy] = useState("all")
+  const [filterBy, setFilterBy] = useState("")
 
   let punkUrl = {
     inUseURL: `https://api.punkapi.com/v2/beers?per_page=80`
@@ -36,12 +36,12 @@ const handleClick = (event) => {
     <div className='container'>
         
       <div className="navbar">
-        <h2>Search Bar</h2>
+        <h1>Whats your poison....</h1>
         <Nav
         onChange={handleClick}
         selected={filterBy}
         options={["ABV > 6%", "Classic (Brewed before 2010)", "Acidic (pH > 4)"]}
-        caption="Select User Gender:"
+        label="Filter the beer some more..."
         
       />
         <h4>Beers returned = {punks.length}</h4>

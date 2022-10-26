@@ -6,8 +6,7 @@ const Nav = ({ onChange, selected, options, label }) => {
       <p>{label}</p>
       {options.map((option, index) => {
         const optionLower = option.toLowerCase();
-        const optionCapitalized =
-          optionLower[0].toUpperCase() + optionLower.slice(1);
+
         return (
           <div key={"radio-button" + option + index}>
             <input
