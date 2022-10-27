@@ -6,18 +6,18 @@ import SearchBar from './containers/SearchBar/SearchBar';
 
 const App = () => {
   const [punks, setPunks] = useState([]);
-  const [abvBeers, setAbvBeers] = useState(false); //refac
-  const [classicBeers, setClassicBeers] = useState(false); //refac
-  const [phBeers, setPhBeers] = useState(false); //refac
+  const [punksByABV, setPunksByABV] = useState(false); //refac
+  const [punksByClassicRange, setPunksByClassicRange] = useState(false); //refac
+  const [punksAcidity, setPunksAcidity] = useState(false); //refac
   const [punksArry, setPunksArry] = useState([]); //refac
 
 
   const getPunks = async () => {
-    const res = await fetch(`https://api.punkapi.com/v2/beers?per_page=80`);
+    const res = await fetch(`https://api.punkapi.com/v2/beers?page=1&per_page=80`);
     const data = await res.json();
     setPunks(data);
     setPunksArry(data);
-    console.log(punks)
+    console.log(punks);
 };
 
   useEffect(() => {
@@ -26,30 +26,30 @@ const App = () => {
 
   //refac
   const handleABV = () => {
-    setAbvBeers(!abvBeers)
+    setPunksByABV(!punksByABV)
   } 
 
   const handleClassic = () => {
-    setClassicBeers(!classicBeers)
+    setPunksByClassicRange(!punksByClassicRange)
   } 
 
   const handlePh = () => {
-    setPhBeers(!phBeers)
+    setPunksAcidity(!punksAcidity)
   } 
 
   useEffect(() => {
     let checkedBeer = punksArry;
-    if (abvBeers) {
+    if (punksByABV) {
       checkedBeer = checkedBeer.filter(beer => beer.abv > 6)
     }
-    if (classicBeers) {
+    if (punksByClassicRange) {
       checkedBeer = checkedBeer.filter(beer => beer.first_brewed.slice(3) < 2010)
     } 
-    if (phBeers) {
+    if (punksAcidity) {
       checkedBeer = checkedBeer.filter(beer => beer.ph < 4)
     }
     setPunks(checkedBeer)
-  }, [abvBeers, classicBeers, phBeers, punksArry])
+  }, [punksByABV, punksByClassicRange, punksAcidity, punksArry])
 
 
 
