@@ -1,29 +1,14 @@
 import "./Nav.scss";
+import NavFilter from "../../components/NavFilter/NavFilter.jsx";
 
-const Nav = ({ onChange, selected, options, label }) => {
+const Nav = (props) => {
+  const {handleABV, handleClassic, handlePh} = props;
   return (
-    <div className="check-boxes">
-      <p>{label}</p>
-      {options.map((option, index) => {
-        const optionLower = option.toLowerCase();
-
-        return (
-          <div key={"check-boxes" + option + index}>
-            <input
-              type="checkbox"
-              name="gender"
-              value={optionLower}
-              checked={optionLower === selected.toLowerCase()}
-              onChange={onChange}
-            />
-            <label className="check-boxes__label" htmlFor={optionLower}>
-              {option}
-            </label>
-          </div>
-        );
-      })}
-    </div>
-  );
-};
+      <div className="nav">
+          <h1>Refine your beers....</h1>
+          <NavFilter handleABV={handleABV} handleClassic={handleClassic} handlePh={handlePh}/>
+      </div>
+      )
+}
 
 export default Nav;
