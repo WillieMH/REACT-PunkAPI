@@ -1,36 +1,36 @@
 import "./Nav.scss";
 // import NavFilter from "../../components/NavFilter/NavFilter.jsx";
 
-const Nav = (props) => {
-  const {handleABV, handleClassic, handlePh} = props;
-  return (
-      <div className="nav">
-          <input 
-                    className="checkbox__input" 
-                    value="abv" 
-                    type="checkbox" 
-                    onChange={handleABV}/>
-                    <label className="checkbox__label">High ABV (&gt; 6.0%)</label>
+const Nav = ({checkByVol, checkByYrBrewed, checkByAcidity}) => {
 
+return (
+    <div className="">
+        <input 
+            className="" 
+            value="abv > 6%" 
+            type="checkbox" 
+            onChange={checkByVol}
+        />
+        <label className="">High ABV (&gt; 6.0%)</label>
                 
-                <input 
-                    className="checkbox__input" 
-                    value="classic" 
-                    type="checkbox" 
-                    onChange={handleClassic}
+        <input 
+            className="" 
+            value="brewed pre2010" 
+            type="checkbox" 
+            onChange={checkByYrBrewed}
                 />
-                <label className="checkbox__label">Classic Range (before 2010)</label>
-
+        <label className="">Classic Range (before 2010)</label>
                 
-                <input 
-                    className="checkbox__input" 
-                    value="ph" 
-                    type="checkbox"
-                    onChange={handlePh} 
-                />
-                <label className="checkbox__label">"Acidic (pH &lt; 4)"</label>
-      </div>
-      )
+        <input 
+            className="" 
+            value="acidity"
+            name="acidity"
+            type="checkbox"
+            onChange={checkByAcidity} 
+            />
+            <label className="">"Acidic (pH &lt; 4)"</label>
+    </div>
+    )
 }
 
 export default Nav;

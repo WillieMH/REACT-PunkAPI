@@ -2,7 +2,7 @@ import "./SearchBar.scss"
 import { useState } from "react";
 import BeerTiles from "../BeerTiles/BeerTiles";
 import SearchBanner from "../../components/SearchBanner/SearchBanner"
-import Nav from "../Nav/Nav";
+
 
 
 
@@ -24,7 +24,7 @@ const SearchBar = ({punksArry}) => {
   return (
     <div className="container">
       <div className="searchbanner">
-        <SearchBanner label={"Search Beers"} searchTerm={searchTerm} handleInput={handleInput} />
+        <SearchBanner label="Search Our Beers" searchTerm={searchTerm} handleInput={handleInput} />
       </div>
       <div className="beertiles">
         <BeerTiles beersArry={filteredPunks}/>
