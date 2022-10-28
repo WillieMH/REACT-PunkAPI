@@ -1,6 +1,6 @@
 @font-face {
   font-family:"Punk";
-  src: url("../src/assets/Funkrocker.otf") format("truetype");
+  src: url("../src/assets/punky.ttf") format("truetype");
 }
 
 * {
@@ -37,9 +37,9 @@ body {
 
   h2 {
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 35px;
     color: rgba(219,234,183,255);
-    font-style: italic;
+    font-family: "Junk", sans-serif;
   }
 }
 
@@ -101,7 +101,7 @@ body {
     
     h1 {
       font-family: "Punk", sans-serif;
-      font-size: 22px;
+      font-size: 28px;
       color: rgba(219,234,183,255);
   }
   

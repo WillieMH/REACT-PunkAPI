@@ -28,7 +28,7 @@ return (
             type="checkbox"
             onChange={checkByAcidity} 
             />
-            <label className="">"Acidic (pH &lt; 4)"</label>
+            <label className="">Acidic (pH &lt; 4)</label>
     </div>
     )
 }
