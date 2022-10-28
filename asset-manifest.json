@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/REACT-PunkAPI/static/css/main.02aab044.css",
+    "main.js": "/REACT-PunkAPI/static/js/main.e82441ac.js",
+    "static/js/787.ae7c3095.chunk.js": "/REACT-PunkAPI/static/js/787.ae7c3095.chunk.js",
+    "static/media/Funkrocker.otf": "/REACT-PunkAPI/static/media/Funkrocker.0d84fe65fb6575b00611.otf",
+    "static/media/viv.png": "/REACT-PunkAPI/static/media/viv.511394abc41f0d94d918.png",
+    "static/media/-bw.png": "/REACT-PunkAPI/static/media/-bw.f8c1473214c820a64004.png",
+    "index.html": "/REACT-PunkAPI/index.html",
+    "main.02aab044.css.map": "/REACT-PunkAPI/static/css/main.02aab044.css.map",
+    "main.e82441ac.js.map": "/REACT-PunkAPI/static/js/main.e82441ac.js.map",
+    "787.ae7c3095.chunk.js.map": "/REACT-PunkAPI/static/js/787.ae7c3095.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02aab044.css",
+    "static/js/main.e82441ac.js"
+  ]
+}
