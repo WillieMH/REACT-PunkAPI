@@ -7,11 +7,24 @@ const BeerTiles = (props) => {
 
 
       <div className="container__beer-tiles">
-        <h2>{beer.name}</h2>
-        <h4>"{beer.tagline}"</h4>
-        <h4>"ABV{beer.abv}% Acidity:{beer.ph}</h4>
-        <img src={beer.image_url} alt="Beer" />
-        <h4>First Brewed {beer.first_brewed}</h4>
+        <div className="container__beer-tiles--title">
+          <h2>{beer.name}</h2>
+          <h3>"{beer.tagline}"</h3>
+        </div>
+
+        <div className="container__beer-tiles--info">
+          <div className="container__beer-tiles--infotext">
+            
+            <h4>ABV{beer.abv}% Acidity:{beer.ph}</h4>
+            <h4>Potion Invented: {beer.first_brewed}</h4>
+            <p>{beer.description}</p>
+          </div>
+          <div className="container__beer-tiles--infoimg">
+            <img src={beer.image_url} alt="Beer" />
+          </div>
+
+        </div>
+        
       </div>
 
       

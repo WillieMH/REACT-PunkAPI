@@ -3,25 +3,62 @@
   src: url("../../../src/assets/Funkrocker.otf") format("truetype");
 }
 
+@font-face {
+  font-family:"Anarchaos";
+  src: url("../../assets/Anarchaos-7BX9w.otf") format("truetype");
+}
+
 .container__beer-tiles {
-  margin: 10px;
+  margin: 8px;
   border: 3px solid whitesmoke;
   border-radius: 8px;
   width: 400px;
   color: black;
   padding: 10px;
   background-color: rgba(219,234,183, 0.75);
-  
+}
+
+  .container__beer-tiles--title{
   h2 {
     font-family: "Junk", sans-serif;
+    font-size: 30px;
+    margin-bottom: -10px;
+  }
+
+  h3 {
+    font-family: "Anarchaos", sans-serif;
+    font-size: 26px;
+    // font-style: italic;
+    margin-bottom: 5px;
   }
 }
 
-h4 {
-  font-style: italic;
-  // line-height: 2px;
+.container__beer-tiles--info {
+  display: flex;
+  justify-content: space-between;
 }
 
+.container__beer-tiles--infotext {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    padding: 5px;
+  }
+
+  
+
+  h4{
+    margin-bottom: 4px;
+  }
+}
+
+.container__beer-tiles--infoimg {
+  padding-right: 15px;
+}
+
+
+
 img {
-  max-height: 200px;
+  max-height: 250px;
 }
