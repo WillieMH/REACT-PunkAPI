@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/REACT-PunkAPI/static/css/main.61df8761.css",
-    "main.js": "/REACT-PunkAPI/static/js/main.6e16992f.js",
+    "main.css": "/REACT-PunkAPI/static/css/main.5df1b850.css",
+    "main.js": "/REACT-PunkAPI/static/js/main.3e6808a7.js",
     "static/js/787.ae7c3095.chunk.js": "/REACT-PunkAPI/static/js/787.ae7c3095.chunk.js",
     "static/media/Funkrocker.otf": "/REACT-PunkAPI/static/media/Funkrocker.0d84fe65fb6575b00611.otf",
     "static/media/punky.ttf": "/REACT-PunkAPI/static/media/punky.86676c61ffd2ec50dbff.ttf",
     "static/media/viv.png": "/REACT-PunkAPI/static/media/viv.511394abc41f0d94d918.png",
     "static/media/-bw.png": "/REACT-PunkAPI/static/media/-bw.f8c1473214c820a64004.png",
+    "static/media/Anarchaos-7BX9w.otf": "/REACT-PunkAPI/static/media/Anarchaos-7BX9w.993b04b754c42ae2760d.otf",
     "index.html": "/REACT-PunkAPI/index.html",
-    "main.61df8761.css.map": "/REACT-PunkAPI/static/css/main.61df8761.css.map",
-    "main.6e16992f.js.map": "/REACT-PunkAPI/static/js/main.6e16992f.js.map",
+    "main.5df1b850.css.map": "/REACT-PunkAPI/static/css/main.5df1b850.css.map",
+    "main.3e6808a7.js.map": "/REACT-PunkAPI/static/js/main.3e6808a7.js.map",
     "787.ae7c3095.chunk.js.map": "/REACT-PunkAPI/static/js/787.ae7c3095.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.61df8761.css",
-    "static/js/main.6e16992f.js"
+    "static/css/main.5df1b850.css",
+    "static/js/main.3e6808a7.js"
   ]
 }
